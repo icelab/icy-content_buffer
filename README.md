@@ -1,8 +1,6 @@
-# Icy::ContentBuffer
+# Icy:ContentBuffer
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/icy/content_buffer`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Content Buffer stores a section of your template for later use. It can be retrieved by passing the block identifier to the the store, and then it can be used in other templates.
 
 ## Installation
 
@@ -22,7 +20,34 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Making the Content Buffer available to your application:
+
+```
+require "content_buffer"
+
+def initialize
+  @content_buffer = ContentBuffer.new
+end
+```
+
+Capturing the content:
+
+```
+content_buffer.set(:title, "Notes tagged #{category.name}")
+```
+
+Or with a block:
+
+```
+content_buffer.set :og_meta_tags do
+    # structure the content to be captured
+```
+
+Retrieving the content by its identifier:
+
+```
+content_buffer.get(:og_meta_tags)
+```
 
 ## Development
 
@@ -32,7 +57,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/icy-content_buffer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[icelab]/icy-content)buffer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
