@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in icy-content_buffer.gemspec
+# Specify your gem's dependencies in dry-ice-content_capturer.gemspec
 gemspec
 
 group :test do
