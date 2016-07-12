@@ -1,4 +1,4 @@
-# Icy:ContentBuffer
+# `Icy::ContentBuffer`
 
 Content Buffer stores a section of your template for later use. It can be retrieved by passing the block identifier to the the store, and then it can be used in other templates.
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Making the Content Buffer available to your application:
 
-```
+```ruby
 require "content_buffer"
 
 def initialize
@@ -32,20 +32,21 @@ end
 
 Capturing the content:
 
-```
+```ruby
 content_buffer.set(:title, "Notes tagged #{category.name}")
 ```
 
 Or with a block:
 
-```
+```ruby
 content_buffer.set :og_meta_tags do
-    # structure the content to be captured
+  # structure the content to be captured
+end
 ```
 
 Retrieving the content by its identifier:
 
-```
+```ruby
 content_buffer.get(:og_meta_tags)
 ```
 
@@ -57,10 +58,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[icelab]/icy-content)buffer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/icelab/icy-content_buffer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
