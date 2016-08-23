@@ -23,10 +23,10 @@ Or install it yourself as:
 Making the Content Buffer available to your application:
 
 ```ruby
-require "content_buffer"
+require 'icy-content_buffer'
 
 def initialize
-  @content_buffer = ContentBuffer.new
+  @content_buffer = Icy::ContentBuffer.new
 end
 ```
 
