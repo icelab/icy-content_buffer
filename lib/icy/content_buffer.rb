@@ -8,6 +8,7 @@ module Icy
 
     def set(key, value = nil)
       @content_buffer[key] = block_given? ? yield : value
+      nil
     end
 
     def get(key)
